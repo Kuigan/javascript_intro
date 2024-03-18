@@ -1,0 +1,44 @@
+<!--
+Aufgabenstellung 4:
+Entwickle eine Webseite, die die Noteninterpretation anzeigt, 
+abhängig davon, welche Punktzahl man erreicht hat. 
+Die Noteninterpretation kannst du der Aufgabe 1 entnehmen.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punktzahlrechner</title>
+</head>
+<body>
+    <form id="meinePunktzahl">
+        <label>Gib deine Punktzahl ein:</label>
+        <input type="number" id="userinput" name="Eingabe">
+        <input type="submit" value="Absenden" >
+    </form>
+    <p id="ergebnis"></p>
+    <script>
+        document.getElementById("meinePunktzahl").addEventListener("submit", function(e){
+            e.preventDefault();  
+            let punktzahl = parseInt(document.getElementById("userinput").value);
+            if (punktzahl >= 90) {
+                document.getElementById("ergebnis").textContent = "Dein Ergebnis ist: sehr gut";
+            }
+            else if (punktzahl >= 80) {
+                document.getElementById("ergebnis").textContent = "Dein Ergebnis ist: gut";
+            }
+            else if (punktzahl >= 70) {
+                document.getElementById("ergebnis").textContent = "Dein Ergebnis ist: befriedigend";
+            }
+            else if (punktzahl >= 60) {
+                document.getElementById("ergebnis").textContent = "Dein Ergebnis ist: ausreichend";
+            }
+            else {
+                document.getElementById("ergebnis").textContent = "Dein Ergebnis ist: nicht bestanden";
+            }
+        });
+    </script>  
+</body>
+</html>
