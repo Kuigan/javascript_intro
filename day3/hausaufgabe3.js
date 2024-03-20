@@ -49,7 +49,7 @@ console.log(summeZahlen([1, 2, 3, 4, 5])); // Sollte 15 ausgeben
 
 // Code
 function entferneDuplikate(arr) {
-    // Verwenden Sie hier geeignete Array-Methoden
+// Verwenden Sie hier geeignete Array-Methoden
     return arr.filter((element, index) => arr.indexOf(element) === index);
   }
   
